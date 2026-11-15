@@ -1,0 +1,33 @@
+{
+ "recorded": "2026-11-16T00:27:24+0530",
+ "platform": "cm4",
+ "runtime_build": "reference firmware",
+ "tokens": 32,
+ "runs": [
+  {
+   "prompt": "What color is the sky on a clear day?",
+   "text": "The sky on a clear day is typically blue. This is due to the scattering of sunlight by the atmosphere, which is known as Rayleigh scattering. The blue",
+   "chunks": 32,
+   "ttft_s": 366.514,
+   "decode_s_per_chunk_median": 3.5453,
+   "total_s": 480.37
+  },
+  {
+   "prompt": "Explain in two sentences why the ocean is salty.",
+   "text": "The ocean is salty because it contains dissolved salts, primarily sodium chloride, which are dissolved in the water. These salts are present due to the natural process of ev",
+   "chunks": 32,
+   "ttft_s": 45.606,
+   "decode_s_per_chunk_median": 3.5432,
+   "total_s": 155.53
+  },
+  {
+   "prompt": "Write a short Python function that reverses a string.",
+   "text": "```python\ndef reverse_string(s: str) -> str:\n    return s[::-1]\n```",
+   "chunks": 22,
+   "ttft_s": 45.533,
+   "decode_s_per_chunk_median": 3.5422,
+   "total_s": 119.91
+  }
+ ],
+ "board": "Raspberry Pi CM4 (4x Cortex-A72, 8 GB)"
+}

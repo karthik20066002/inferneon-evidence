@@ -1,0 +1,10 @@
+{
+ "source": "on-board hardware survey of the ThinkCentre (raw logs kept private: they contain network addresses)",
+ "memory": "8192 MB in ChannelA-DIMM0 (single channel), 2667 MT/s rated, 2400 MT/s configured",
+ "memory_read_bandwidth_gb_per_s": {
+  "1 thread": 15.9,
+  "2 threads": 15.7,
+  "4 threads": 17.2
+ },
+ "cpu": "Intel Core i3-7100T: 2 cores, 4 threads (hyperthreading), TSC 3.41 GHz"
+}
