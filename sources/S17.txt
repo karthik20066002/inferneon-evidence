@@ -1,0 +1,31 @@
+S17 — Host conformance checks for the Gemma 3 1B, Gemma 3n E4B and LFM3-1.7B ports
+
+Evidence type: project-origin host test records.
+Transformation: Outcome-level results only; file names, kernel and image-format details withheld.
+Original-record SHA256 (4 records):
+  c92b6b9fa5ef70af0be38c01b2c37de84b226d221500938d69e4cae79a53e1ee
+  67f48f093e61e9ce855668ff9c449f037c06af18f96b021ccda778dab30d4090
+  06a6019688ef4d77d612e8ece244c15fd5b4ad4566783d15451db54cd9dca5c6
+  8af16109364f761bb49a4d29ab4aa663848bb1283a036b23faf671e9bce50a5a
+No original filename or implementation is included.
+
+All checks below ran on the laptop (host), not on the CM4.
+
+Gemma 3 1B-it port (2026-11-11):
+- tokenizer: 2,916 texts (292k tokens) tokenized identically to the Hugging Face tokenizer
+- full-precision forward pass vs Hugging Face fp32: per-layer relative error at most 8e-4 over 1,887 tokens; same next token; 32 greedy tokens equal
+- 8-bit weights vs full precision: top-1 agreement 98.7% on a long prompt
+- the packed board image through the firmware engine: 24 greedy tokens identical to Hugging Face fp32
+
+Gemma 3n E4B-it port (2026-11-12): the full-precision port reproduces the 16-token Hugging Face fp32 greedy reference; the 8-bit board image reproduces the host 8-bit reference (see S15).
+
+LFM3-1.7B port (2026-11-12):
+- independent reference implementation vs the model publisher's own code, fp32, 498 tokens: worst layer relative difference 9.5e-6; next-token choice equal at 498/498 positions
+- firmware tokenizer vs Hugging Face tokenizer: 825/825 test strings identical
+- firmware forward pass vs fp32 reference: 32 greedy tokens equal (short and 498-token prompts)
+- firmware engine on the packed 1.86 GB 8-bit image: 32/32 greedy tokens equal; a wrong image checksum is refused
+- chat prompts built by the firmware vs the transformers chat template: 12/12 identical
+- host test suites: 84, 84 and 82 tests passed in the three firmware configurations; 13 installer tests passed
+- web-search decisions on 20 prompts not used while designing the client-side rule: 15/20 correct with the rule, 8/20 with the tool always offered (official full-precision model on the laptop; the 8-bit board model may differ on borderline prompts)
+
+LFM3-1.7B on the CM4: the firmware and model image were installed on the SD card on 2026-11-12 and the written image read back with a matching checksum. It has NOT been run on the board as of this snapshot; no board speed is claimed.

@@ -1,0 +1,28 @@
+{
+ "bars": [
+  [
+   "Attis 27B",
+   "Nov 11",
+   3.5844573179880777,
+   "S13"
+  ],
+  [
+   "Gemma 3n E4B + 1B drafts",
+   "Nov 12 \u00b7 drafting on",
+   1.95,
+   "S15"
+  ],
+  [
+   "Gemma 3n E4B",
+   "Nov 12 \u00b7 after NVMe boot",
+   1.65,
+   "S16"
+  ],
+  [
+   "Gemma 3 1B",
+   "Nov 11",
+   0.36,
+   "S14"
+  ]
+ ]
+}

@@ -1,0 +1,12 @@
+S06 — Three physical CM4 ping replies
+
+Evidence type: project-origin record, sanitized for disclosure.
+Transformation: Network addresses, commands and paths removed. Reply sequence, TTL and timing values retained.
+Original-record SHA256: 7384290bb39e12dda3c338793971f404bd9db9345b5e0584a81391827e2be96a
+No original filename or implementation is included.
+
+User-supplied terminal excerpt; three replies.
+sequence=1 ttl=64 time=0.118 ms
+sequence=2 ttl=64 time=0.185 ms
+sequence=3 ttl=64 time=0.168 ms
+The supplied excerpt omitted aggregate statistics. N=3 is not a latency distribution study.

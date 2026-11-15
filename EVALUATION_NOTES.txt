@@ -1,0 +1,39 @@
+Scope and evidence limits
+
+1. Model quality
+The 27B table records a reference and eleven research checkpoints. The minimum recorded perplexity is selected from that series. The local evaluation harness and launcher identify WikiText-103-raw-v1 test data, the first 200 text rows, context 2048, and stride 1024. The current harness scores all prediction positions in each overlapping window instead of excluding the already-scored overlap. Its count therefore includes repeated positions. These are project-evaluator scores, not directly comparable to a standard unique-token benchmark or published leaderboard. The archived TSV does not embed the executed code revision, command, sample count, or full environment. A faithful protocol reconstruction requires the private records; a new independent evaluation remains necessary.
+
+The deployment-candidate series uses the same documented text slice and overlapping-window approach. A duplicate initial row is retained in the released data and collapsed only in its plot. Original checkpoint labels were replaced with ordinal identifiers to protect confidential methods. No confidence intervals or repeated seeds are recorded. Lower perplexity is better, but an 11.23% relative reduction in perplexity is not an 11.23% increase in general intelligence or task accuracy.
+
+2. Numerical checks
+The 64 FP64 comparisons concern a component implementation tested on controlled inputs. Near-machine-precision agreement does not imply identical complete-model answers, identical lower-precision hardware execution, or model quality. The component implementation and detailed inputs remain private.
+
+3. Physical component timing
+The CM4 timing data were recorded in a Linux component harness on 2026-10-22 at 1.5 GHz, with a fixed cold workload, 64 warmups excluded and 256 timed trials for each of one through four threads. The original report records no throttling in the run brackets. All four thread-count series are included. Percentiles use sorted[min(N-1, int(N*p))], matching the original convention. Four threads reduce the median by about 3.69x but the mean by only about 1.88x, with worse p99 latency. Workload specification and implementation are withheld, so the public data can reproduce the analysis but cannot independently reproduce the underlying experiment. This is not full-model generation, current bare-metal firmware performance, or a comparison against GPUs.
+
+4. Physical network evidence
+The 70,000-exchange test and three ping replies are user-supplied terminal observations from 2026-11-03. The echo test stops on its first missing or non-identical reply and cycles five payload lengths up to 1472 bytes. It crossed the 16-bit counter boundary. No raw packet capture is bundled. One cumulative receive CRC error was observed before the echo run, and no post-run CRC counter was supplied. Zero observed application-level failures does not establish zero link-layer errors or long-term reliability. Three ping replies are too few to characterize a latency distribution.
+
+5. Host vs hardware
+The 59.597-second full-model forward ran on the laptop host, not the CM4. It exercised one input token through the actual packed model and produced finite output scores. The host test suite and tokenizer checks also run on the laptop. Physical CM4 results are in S05, S041–S044, S11A–S11B and S12–S16; S17 is laptop-only.
+
+6. Attribution and provenance
+The base model and dataset are third-party work; see sources/PUBLIC_REFERENCES.txt. Every result in this kit is project-origin evidence, not an independent audit or peer-reviewed publication. Sanitized excerpts retain measurement values while removing implementation, training settings, local paths and sensitive context. SHA256 digests bind the retained original records; they are not proof of experimental correctness or an independent timestamp. Original files and the full label mapping remain private.
+
+7. Claims not supported
+No production deployment, fleet-scale distributed inference, GPU cost advantage, energy saving, broad benchmark superiority, commercial adoption, customer commitment, or interactive generation on a CM4 is established by this bundle. Different models running at different speeds is not a speedup of any one model. No hypothetical grant budget or spending totals are presented as measured results.
+
+8. Physical CM4 end-to-end request measurements (added 2026-11-04)
+Sources S11A and S11B are extracts of two client-written JSON benchmark records, each containing two successive requests on the same CM4. The request is shown in each extract: model Attis, user message Hi, temperature 0 and max_tokens 1. Reported usage is 13 prompt tokens plus one completion token; every returned message is Hi and every HTTP status is 200. Session A times were 565.0101 and 565.3675 seconds; session B times were 560.9732 and 269.0812 seconds. Comparing the second requests gives 2.10x speedup and 52.41% lower latency. First-request timings changed little. These observations are not independent replicates, have no confidence intervals, and do not establish long-response speed or broad answer quality. Client completion time includes request handling and prompt processing; dividing the output-token count by this time is not a steady-state generation throughput benchmark. Internal implementation and runtime diagnostics are withheld. No result from the subsequent unvalidated build is included.
+
+9. Longer CM4 answers of the 27B model (added 2026-11-13)
+S12 and S13 are client-written JSON records with per-token timestamps. S12 (2026-11-06) and S13 (2026-11-11) come from different builds and different prompts, so the change in seconds per token between them is not a matched comparison and no cause is attributed to any one change. S13's cold run is the first request after power-on; its long first-token time includes loading model data from the SD card. S13's third run used a draft-and-verify mode, which makes its intervals irregular; its mean is not used as a plain decode rate.
+
+10. Gemma 3 1B and Gemma 3n E4B on the CM4 (added 2026-11-13)
+S14–S16 are console records captured verbatim, with timestamps, by the operator session log; the runs did not write a separate benchmark file. The client reports seconds per token as the mean interval between streamed tokens after the first. Reference checks compare the board's output text with greedy output produced on the laptop: Hugging Face fp32 for Gemma 3 1B (32 tokens) and Gemma 3n E4B (16 tokens), and the project's own 8-bit host reference for the full 59-token E4B answer. Matching text shows that the board computes what the reference computes for these prompts; it is not a quality evaluation. The E4B drafting-off run reused 19 cached prompt tokens, so its 1.7 s first-token time is not a cold prompt time. Drafting with the 1B model was slower than plain decoding on this board (1.95 vs 1.66 s/token); it is reported because it is the measured result. The E4B firmware printed a stale build name in its banner; the build is identified by its 8.60 GB model image. These are third-party models; see sources/PUBLIC_REFERENCES.txt.
+
+11. NVMe boot (added 2026-11-13)
+S16: the one-time 8.60 GB copy took 477 s; the 57 MB/s NVMe load rate was sampled over 10 seconds during one boot, not timed end to end. The drive affects boot time only; generation speed after the NVMe boot (1.65 s/token) matches the SD-booted build.
+
+12. LFM3-1.7B (added 2026-11-13)
+S17 records laptop-only agreement between the project's implementation and reference implementations, including the model publisher's own code. The model is installed on the board's SD card but has not been run there; no board speed or output is claimed. The web-search decision score uses 20 prompts that were not used while designing the client-side rule, on the full-precision model; the board runs an 8-bit model. LFM3-1.7B is licensed for non-commercial use only.

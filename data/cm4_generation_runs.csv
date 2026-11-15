@@ -1,0 +1,9 @@
+date,model,build,condition,prompt_tokens,reused_prompt_tokens,completion_tokens,first_token_s,s_per_token,total_s,reference_check,source_id
+2026-11-06,Attis 27B,27B-B1,"warm, story prompt",24,0,32,82.2393,3.8137,200.4649,,S12
+2026-11-11,Attis 27B,27B-B2,"cold, first request after boot",23,0,32,367.9406,3.6156,480.0251,,S13
+2026-11-11,Attis 27B,27B-B2,"warm, list repeat",42,0,44,82.4072,3.5845,236.5384,,S13
+2026-11-11,Gemma 3 1B-it,1B-G1,sky prompt,20,0,40,6.1,0.36,20.0,begins with the 32-token HF fp32 greedy text,S14
+2026-11-11,Gemma 3 1B-it,1B-G1,follow-up turn,40,26,7,4.6,0.31,6.5,,S14
+2026-11-12,Gemma 3n E4B-it,E4B-F1,drafting off,,19,24,1.7,1.66,,prefix of the host 8-bit reference,S15
+2026-11-12,Gemma 3n E4B-it + 1B drafts,E4B-F1,drafting on (slower),20,0,59,40.7,1.95,154.0,identical to the host 8-bit reference; begins with the HF fp32 greedy text,S15
+2026-11-12,Gemma 3n E4B-it,E4B-F2,after NVMe boot,20,0,48,32.7,1.65,110.1,prefix of S15 run B,S16

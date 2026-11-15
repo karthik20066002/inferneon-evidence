@@ -1,0 +1,22 @@
+Public context references (checked 2026-11-03)
+These sources identify upstream work and evaluation context; they do not independently validate project results.
+
+Attis base model:
+Attis is adapted in this project from a third-party open-weight 27B base model, which is not named in this kit.
+No claim of inventing or pretraining that base model is made here.
+
+Third-party models run on the board in the 2026-11-13 snapshot (none were trained or invented by this project):
+Google Gemma 3 1B-it: https://huggingface.co/google/gemma-3-1b-it (Gemma Terms of Use)
+Google Gemma 3n E4B-it: https://huggingface.co/google/gemma-3n-E4B-it (Gemma Terms of Use)
+Liquid AI LFM3-1.7B: https://huggingface.co/LiquidAI/LFM3-1.7B (LFM Open License v1.0: non-commercial use only)
+
+WikiText dataset card:
+https://huggingface.co/datasets/Salesforce/wikitext
+Dataset text is not redistributed in this kit.
+
+Emergent Ventures program:
+https://www.mercatus.org/emergent-ventures
+Application instructions:
+https://mercatus.tfaforms.net/5099527
+The current form limits AI use to proofreading and says attachments cannot be PDFs.
+This AI-assisted evidence bundle is a reference for the applicant, not a submission-ready application. Do not assume supplemental materials are exempt from that rule.

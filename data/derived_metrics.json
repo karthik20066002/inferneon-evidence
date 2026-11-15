@@ -1,0 +1,19 @@
+{
+  "reference_perplexity": 10.8204,
+  "research_perplexity": 9.6052,
+  "relative_perplexity_reduction_percent": 11.230638423718156,
+  "deployment_perplexity": 9.6245,
+  "deployment_vs_research_percent": 0.20093282805146995,
+  "component_max_absolute_difference": 2.416e-13,
+  "component_comparisons": 64,
+  "latency_samples_per_thread": {
+    "1": 256,
+    "2": 256,
+    "3": 256,
+    "4": 256
+  },
+  "median_speed_ratio_1_to_4": 3.687095002320154,
+  "cm4_repeated_request_speed_ratio": 2.101103436285064,
+  "cm4_repeated_request_latency_reduction_percent": 52.405960471508806,
+  "cm4_api_observations": 4
+}

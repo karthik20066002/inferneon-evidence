@@ -1,0 +1,5 @@
+build,request_number,condition,client_seconds,prompt_tokens,completion_tokens,response,http_status,source_id
+A,1,First request in session,565.010104353998,13,1,Hi,200,S11A
+A,2,Repeated request in same session,565.3674912610004,13,1,Hi,200,S11A
+B,1,First request in session,560.9731892510026,13,1,Hi,200,S11B
+B,2,Repeated request in same session,269.0812272719995,13,1,Hi,200,S11B

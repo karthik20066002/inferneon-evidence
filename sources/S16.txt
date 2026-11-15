@@ -1,0 +1,17 @@
+S16 — Physical CM4: NVMe boot of the 8.6 GB model (2026-11-12)
+
+Evidence type: project-origin console record from a physical CM4 run, captured verbatim by the operator session log (timestamped, UTC). No separate benchmark JSON was written for this run.
+Transformation: Copy time, load rate and client timing retained; commands, addresses and drive layout removed.
+Original-record SHA256 (2 records):
+  70ae75860274f7a88f74bc715795d6a1dbb8146c458fdf0cb8d8a1b3040e337e
+  997c9fb1da7aac165fe445047b467a523cb4737acf5bfdd01bee3d12e9cd9c1d
+No original filename or implementation is included.
+
+Build anonymized E4B-F2 (2026-11-12): E4B-F1 plus an on-board NVMe driver (256 GB M.2 drive on the CM4 carrier).
+
+First boot: the 8.60 GB model image was copied once from the SD card to the NVMe drive in 477 s.
+Loading from NVMe into RAM, sampled over 10 s: 1.06 GB loaded, 57 MB/s (every byte checksum-verified while loading).
+
+After the NVMe boot, prompt "Why is the sky blue? Answer in two sentences.", max_tokens 48, temperature 0, drafting off:
+first token 32.7 s (20 prompt tokens) | 1.65 s/token over 47 steps | 48 tokens in 110.1 s
+The output is the first 48 tokens of the same text as S15 run B. Per-layer progress sampled during the run reached layer 34 of 35.

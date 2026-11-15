@@ -1,0 +1,13 @@
+S09 — Earlier 1.7B evaluation: retained success and failure
+
+Evidence type: project-origin record, sanitized for disclosure.
+Transformation: Only selected outcome-level values and limitation retained. All methods, architecture, training settings, filenames and implementation details withheld.
+Original-record SHA256: d77933888158a9332365231a1c14ee4ff43d6e6022294e89f75a5ad93936037f
+No original filename or implementation is included.
+
+Evidence type: numerical extraction from project results notes, not a primary evaluation trace.
+Reference perplexity: 17.6496
+Retained research candidate: 17.6809
+Failed experimental result: 244.1
+The notes report quality preservation but do not establish a useful functional advantage in this earlier track.
+These results are not cross-comparable with the 27B series.

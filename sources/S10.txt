@@ -1,0 +1,11 @@
+S10 — Validated model artifact size
+
+Evidence type: project-origin record, sanitized for disclosure.
+Transformation: Only total size and artifact digest released; layout and internal section sizes withheld.
+Original-record SHA256: 3f710c26a67c8d38645bc219b939bb3fa84b33d4183d78a5cf69df9271e2612c
+No original filename or implementation is included.
+
+Artifact size: 7359800072 bytes (7.3598 decimal GB)
+Artifact SHA256: f533b7fce17025cf8c676eda698248c342a4d2c436e726e7de23f918f4c9b647
+
+This is a file-size measurement, not runtime memory use. Model weights are not included in the kit.

@@ -1,0 +1,20 @@
+S01 — 27B recorded quality evaluation
+
+Evidence type: project-origin record, sanitized for disclosure.
+Transformation: All numeric metric values retained. Original checkpoint identifiers replaced by ordinal labels.
+Original-record SHA256: 0a3eb9e9a4742e032cba28863514f08ba2ad8f7412e8e28365d6a78068c0ae29
+No original filename or implementation is included.
+
+record	perplexity	nll
+Reference	10.8204	2.3814
+R01	10.8072	2.3802
+R02	10.6844	2.3688
+R03	10.3062	2.3327
+R04	9.9824	2.3008
+R05	9.8412	2.2866
+R06	9.7609	2.2784
+R07	9.7067	2.2728
+R08	9.6707	2.2691
+R09	9.6444	2.2664
+R10	9.6228	2.2641
+R11	9.6052	2.2623

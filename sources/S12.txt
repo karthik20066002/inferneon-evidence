@@ -1,0 +1,32 @@
+S12 — Physical CM4: 32-token streamed answer, 27B model (2026-11-06)
+
+Evidence type: project-origin JSON benchmark record written by the laptop client during physical CM4 execution.
+Transformation: Explicit whitelist: request, response text, usage and client timing. Runtime diagnostics withheld; build anonymized as 27B-B1.
+Original-record SHA256 (1 record):
+  e20ed00834276d61bf7b84238d4527d62f6027e98c0be12add8831c5ce38c386
+No original filename or implementation is included.
+
+{
+  "request": {
+    "prompt": "Write a short story about a robot who learns to paint.",
+    "max_tokens": 32,
+    "temperature": 0,
+    "stream": true
+  },
+  "response_text": "The robot, named \"PaintBot,\" was a small, round robot with a single eye and a pair of arms. It was designed to paint, but it",
+  "usage": {
+    "completion_tokens": 32,
+    "prompt_tokens": 24,
+    "total_tokens": 56
+  },
+  "first_token_seconds": 82.23931312561035,
+  "total_seconds": 200.46486234664917,
+  "decode_interval_seconds": {
+    "mean": 3.813724056366951,
+    "min": 3.7943809032440186,
+    "max": 3.858727216720581,
+    "n": 31
+  }
+}
+
+Platform: 8 GB Raspberry Pi CM4, 1.5 GHz, bare-metal HTTP endpoint over Ethernet. Model: Attis, a 27B model adapted in this project from a third-party base model. Per-token timestamps measured by the laptop client. One prompt, one run.

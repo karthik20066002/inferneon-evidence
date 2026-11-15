@@ -1,0 +1,13 @@
+S08 — API/runtime host regression suite
+
+Evidence type: project-origin record, sanitized for disclosure.
+Transformation: Only aggregate test result retained; coverage summarized without implementation names. Fixture count independently counted in local data.
+Original-record SHA256: deb6468fb149f4ea39b5d5fed323c34501aaae7d876f365bfa037bd2a1f14765
+No original filename or implementation is included.
+
+test result: ok. 35 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.36s
+
+Coverage includes HTTP framing, request validation, byte-safe streaming, sampling, TCP packet-loss handling, storage mapping, and existing network regressions.
+Two expensive model tests were skipped by this ordinary suite and were run separately.
+A tokenizer test compared 512 fixtures; this is one test containing 512 comparisons.
+These results do not establish hardware API operation.

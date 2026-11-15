@@ -1,0 +1,61 @@
+S13 — Physical CM4: three streamed answers, 27B model, later build (2026-11-11)
+
+Evidence type: project-origin JSON benchmark record written by the laptop client during physical CM4 execution.
+Transformation: Whitelisted fields only; one prompt and response replaced by a description. Runtime diagnostics withheld; build anonymized as 27B-B2.
+Original-record SHA256 (3 records):
+  d8aa78f6e99eb2d29965c8c8f6093095f4afc640d357cf739a453cc1ce36f705
+  ff41751dc697e84bb92904b5f19242c22a63234427abb595ed3dd7a55cdf9694
+  445e2942fe7950864cfcff2f6bb5a7c3b16f8a588662322c5263d29cb9972d10
+No original filename or implementation is included.
+
+[
+  {
+    "condition": "Cold: first request after boot",
+    "prompt_tokens": 23,
+    "completion_tokens": 32,
+    "first_token_seconds": 367.94062399864197,
+    "total_seconds": 480.02508902549744,
+    "decode_interval_seconds": {
+      "mean": 3.6156203746795654,
+      "min": 3.5678622722625732,
+      "max": 4.237025022506714,
+      "n": 31
+    },
+    "prompt": "Explain in two sentences why the sky is blue.",
+    "response_text": "The sky is blue because sunlight is scattered by the atmosphere, with shorter wavelengths (blue) being scattered more than longer wavelengths. This scattering effect, known as Ray"
+  },
+  {
+    "condition": "Warm: verbatim list repeat",
+    "prompt_tokens": 42,
+    "completion_tokens": 44,
+    "first_token_seconds": 82.4071683883667,
+    "total_seconds": 236.53839802742004,
+    "decode_interval_seconds": {
+      "mean": 3.5844573179880777,
+      "min": 3.570917844772339,
+      "max": 3.5938456058502197,
+      "n": 42
+    },
+    "prompt": "A request to repeat a 26-word list one word per line (text omitted)",
+    "response_text": "The list, verbatim, one word per line (44 tokens; text omitted)"
+  },
+  {
+    "condition": "Warm: sentence repeated three times (draft-and-verify active)",
+    "prompt_tokens": 32,
+    "completion_tokens": 31,
+    "first_token_seconds": 62.485055923461914,
+    "total_seconds": 155.83593344688416,
+    "decode_interval_seconds": {
+      "mean": 3.206198314140583,
+      "min": 2.5033950805664062e-05,
+      "max": 13.097688674926758,
+      "n": 29
+    },
+    "prompt": "Write this sentence three times, separated by spaces: The quick brown fox jumps over the lazy dog.",
+    "response_text": "The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.",
+    "drafted_tokens": 20,
+    "accepted_drafts": 16
+  }
+]
+
+Same board, clock 1.5 GHz, temperature 0, run in the order shown. The cold run is the first request after a power-on and includes loading model data from the SD card. The third run used a draft-and-verify mode, so its decode intervals are irregular (some tokens arrive together). Different prompts from S12: not a matched comparison.

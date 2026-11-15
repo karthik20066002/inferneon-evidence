@@ -1,0 +1,22 @@
+S05 — Physical CM4 UDP echo test
+
+Evidence type: project-origin record, sanitized for disclosure.
+Transformation: Command path, host addressing and image filename removed; progress and PASS lines retained. Test procedure and CRC limitation summarized from private supporting files.
+Original-record SHA256: 6d6095892463065328977bdfcd0ac0eebfb0c67980fa8bf53fa405c25ccb5d5c
+No original filename or implementation is included.
+
+Source type: user-supplied terminal transcript from physical hardware, 2026-11-03.
+
+10000/70000 echoed
+20000/70000 echoed
+30000/70000 echoed
+40000/70000 echoed
+50000/70000 echoed
+60000/70000 echoed
+70000/70000 echoed
+PASS: 70000 exact UDP echoes in 12.12s
+
+The test checks exact response bytes and fails on the first timeout or mismatch.
+Payload lengths cycle through 8, 9, 64, 512, and 1472 bytes.
+70,000 exchanges cross the 16-bit counter boundary.
+No raw packet capture is supplied. One cumulative receive CRC error was recorded before this run; no post-run CRC reading is available.

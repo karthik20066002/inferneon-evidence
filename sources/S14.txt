@@ -1,0 +1,22 @@
+S14 — Physical CM4: Gemma 3 1B answers (2026-11-11)
+
+Evidence type: project-origin console record from a physical CM4 run, captured verbatim by the operator session log (timestamped, UTC). No separate benchmark JSON was written for this run.
+Transformation: Prompt, output text and client timing lines retained; commands, addresses and diagnostics removed.
+Original-record SHA256 (3 records):
+  3d8bc0f0194a9f76553d672a2540b11c757a45841325f0751164a98c1edb6be7
+  eaa39ea9fd466b617cca3b7ce86177198a155e1e1a56f0e8cb50e363afb8c755
+  b0e42f385d5c428a0312a42a056f9c22d3329360aaeffe1ad7930ffdf54b4701
+No original filename or implementation is included.
+
+Run 1 (2026-11-11), prompt "Why is the sky blue? Answer in two sentences.", max_tokens 40, temperature 0:
+Output: The sky appears blue because of a phenomenon called Rayleigh scattering, where sunlight is scattered by the tiny air molecules in the atmosphere. Blue light is scattered more effectively than other colors, making it spread across the
+first token 6.1 s (20 prompt tokens) | 0.36 s/token over 39 steps | 40 tokens in 20.0 s
+
+Reference check: the board output begins with the exact 32-token greedy continuation produced on the laptop by the Hugging Face fp32 reference model:
+"The sky appears blue because of a phenomenon called Rayleigh scattering, where sunlight is scattered by the tiny air molecules in the atmosphere. Blue light is scattered more effectively than"
+
+Run 2, two-turn conversation, max_tokens 24, temperature 0:
+turn 1: "The capital of France is Paris." | first token 1.1 s (19 prompt tokens) | 0.31 s/token | 7 tokens in 3.0 s | 18 of 19 prompt tokens reused from the previous turn
+turn 2: "The capital of Japan is Tokyo." | first token 4.6 s (40 prompt tokens) | 0.31 s/token | 7 tokens in 6.5 s | 26 of 40 prompt tokens reused from the previous turn
+Turn prompts: "What is the capital of France? One sentence." then "And of Japan?".
+Platform: 8 GB CM4, 1.5 GHz, bare-metal HTTP endpoint. Model: Google Gemma 3 1B-it with 8-bit weights.

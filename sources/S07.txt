@@ -1,0 +1,12 @@
+S07 — Host execution of the actual packed model
+
+Evidence type: project-origin record, sanitized for disclosure.
+Transformation: Only result substring and test summary retained. Source paths, compiler diagnostics, and implementation identifiers removed.
+Original-record SHA256: dbda8a86e34e4ff3bd062c0a65febfe9f6ed9870384694db3e11a6610fc44be1
+No original filename or implementation is included.
+
+Actual 64-layer forward: 59.597071154s; top token 846; piece "user"
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 35 filtered out; finished in 59.61s
+
+Environment: laptop host test, scalar execution path. One input token; all output scores were finite.
+This is not CM4 latency, conversational quality, or an API deployment demonstration.

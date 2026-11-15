@@ -1,0 +1,14 @@
+S02 — Deployment-candidate recorded evaluations
+
+Evidence type: project-origin record, sanitized for disclosure.
+Transformation: Metric values retained; identifiers anonymized. The duplicate initial row is retained. Plotting collapses that exact duplicate only.
+Original-record SHA256: ab27999872558b5f863e3f13afa5eb070acb3c8c1f4233f56ac00c944edc210e
+No original filename or implementation is included.
+
+record	perplexity
+D00	10.0111
+D00	10.0111
+D01	9.6363
+D02	9.6245
+D03	9.6758
+D04	9.6827

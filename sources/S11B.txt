@@ -1,0 +1,51 @@
+{
+  "source_id": "S11B",
+  "provenance": "Project-origin JSON benchmark record written by the laptop client during physical CM4 execution. Extracted numeric results and response fields; implementation and internal diagnostics withheld.",
+  "original_sha256": "cce7adef4ed1b4e697884c58841c554d8274d653e2bb800e23daaccd139dc0ec",
+  "build_label": "B",
+  "platform": "8 GB Raspberry Pi CM4, 1.5 GHz, direct bare-metal HTTP endpoint over Ethernet",
+  "model": "Attis, a 27B model adapted from a third-party base model",
+  "request": {
+    "model": "attis",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hi"
+      }
+    ],
+    "max_tokens": 1,
+    "temperature": 0
+  },
+  "checks": "PASS",
+  "runs": [
+    {
+      "request_number": 1,
+      "condition": "First request in session",
+      "client_elapsed_seconds": 560.9731892510026,
+      "http_elapsed_seconds": 560.9729843460009,
+      "http_status": 200,
+      "response_text": "Hi",
+      "finish_reason": "length",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 13,
+        "total_tokens": 14
+      }
+    },
+    {
+      "request_number": 2,
+      "condition": "Repeated request in same session",
+      "client_elapsed_seconds": 269.0812272719995,
+      "http_elapsed_seconds": 269.0811254799992,
+      "http_status": 200,
+      "response_text": "Hi",
+      "finish_reason": "length",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 13,
+        "total_tokens": 14
+      }
+    }
+  ],
+  "limits": "Two successive requests in one session per build on one board. No repeated independent sessions, confidence interval, power measurement or broad answer-quality evaluation. First and repeated request conditions are reported separately. The client measured full request completion, not steady-state output-token throughput."
+}
