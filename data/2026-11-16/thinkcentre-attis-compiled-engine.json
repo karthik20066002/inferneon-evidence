@@ -1,0 +1,33 @@
+{
+ "recorded": "2026-11-16T18:39:50+0530",
+ "platform": "x86-uefi (ThinkCentre M710q)",
+ "runtime_build": "compiled engine, target parameters from the board's sweep",
+ "tokens": 32,
+ "runs": [
+  {
+   "prompt": "What color is the sky on a clear day?",
+   "text": "The sky on a clear day is typically blue. This is due to the scattering of sunlight by the atmosphere, which is known as Rayleigh scattering. The blue",
+   "chunks": 32,
+   "ttft_s": 5.875,
+   "decode_s_per_chunk_median": 0.5207,
+   "total_s": 22.01
+  },
+  {
+   "prompt": "Explain in two sentences why the ocean is salty.",
+   "text": "The ocean is salty because it contains dissolved salts, primarily sodium chloride, which are dissolved in the water. These salts are present due to the natural process of ev",
+   "chunks": 32,
+   "ttft_s": 6.119,
+   "decode_s_per_chunk_median": 0.5209,
+   "total_s": 22.26
+  },
+  {
+   "prompt": "Write a short Python function that reverses a string.",
+   "text": "```python\ndef reverse_string(s: str) -> str:\n    return s[::-1]\n```",
+   "chunks": 22,
+   "ttft_s": 6.107,
+   "decode_s_per_chunk_median": 0.5203,
+   "total_s": 17.03
+  }
+ ],
+ "board": "ThinkCentre M710q"
+}

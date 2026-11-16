@@ -1,0 +1,17 @@
+{
+ "recorded": "2026-11-16",
+ "board": "ThinkCentre M710q + Raspberry Pi CM4",
+ "what": "Both boards compute every matrix of the model together, rows split 95/5 by measured speed, over raw Ethernet frames",
+ "known_answer_check": "pass (logits identical to the single-machine reference, bit for bit)",
+ "link_round_trip_us": {
+  "median": 137,
+  "min": 136,
+  "p90": 142,
+  "lost": 0,
+  "pings": 64
+ },
+ "link": "100 Mbit/s switch",
+ "wait_ms_per_exchange": 22,
+ "worker_compute_ms_per_exchange": 1.6,
+ "speed": "not yet faster than one board; network-bound at 100 Mbit/s"
+}
