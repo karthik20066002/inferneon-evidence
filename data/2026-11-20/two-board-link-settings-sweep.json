@@ -1,0 +1,145 @@
+[
+ {
+  "window": 64,
+  "rto_us": 2000,
+  "seconds": 23.92,
+  "text": "Hi!",
+  "link": {
+   "retransmits": 70950,
+   "duplicates": 2552,
+   "send_refused": 503635,
+   "frames_sent": 155172,
+   "peer_restarts": 0
+  }
+ },
+ {
+  "window": 16,
+  "rto_us": 10000,
+  "seconds": 18.36,
+  "text": "Hi!",
+  "link": {
+   "retransmits": 0,
+   "duplicates": 2382,
+   "send_refused": 0,
+   "frames_sent": 84217,
+   "peer_restarts": 0
+  }
+ },
+ {
+  "window": 8,
+  "rto_us": 10000,
+  "seconds": 22.54,
+  "text": "Hi!",
+  "link": {
+   "retransmits": 0,
+   "duplicates": 2276,
+   "send_refused": 0,
+   "frames_sent": 84222,
+   "peer_restarts": 0
+  }
+ },
+ {
+  "window": 32,
+  "rto_us": 20000,
+  "seconds": 15.99,
+  "text": "Hi!",
+  "link": {
+   "retransmits": 0,
+   "duplicates": 2377,
+   "send_refused": 207998,
+   "frames_sent": 84215,
+   "peer_restarts": 0
+  }
+ },
+ {
+  "window": 16,
+  "rto_us": 30000,
+  "seconds": 18.37,
+  "text": "Hi!",
+  "link": {
+   "retransmits": 0,
+   "duplicates": 2380,
+   "send_refused": 0,
+   "frames_sent": 84217,
+   "peer_restarts": 0
+  }
+ },
+ {
+  "window": 8,
+  "rto_us": 4000,
+  "seconds": 22.54,
+  "text": "Hi!",
+  "link": {
+   "retransmits": 0,
+   "duplicates": 2274,
+   "send_refused": 0,
+   "frames_sent": 84217,
+   "peer_restarts": 0
+  }
+ },
+ {
+  "window": 4,
+  "rto_us": 4000,
+  "seconds": 29.64,
+  "text": "Hi!",
+  "link": {
+   "retransmits": 0,
+   "duplicates": 2274,
+   "send_refused": 0,
+   "frames_sent": 84216,
+   "peer_restarts": 0
+  }
+ },
+ {
+  "window": 64,
+  "rto_us": 20000,
+  "seconds": 15.99,
+  "text": "Hi!",
+  "link": {
+   "retransmits": 0,
+   "duplicates": 2377,
+   "send_refused": 253429,
+   "frames_sent": 84212,
+   "peer_restarts": 0
+  }
+ },
+ {
+  "window": 48,
+  "rto_us": 20000,
+  "seconds": 15.99,
+  "text": "Hi!",
+  "link": {
+   "retransmits": 0,
+   "duplicates": 2384,
+   "send_refused": 255029,
+   "frames_sent": 84228,
+   "peer_restarts": 0
+  }
+ },
+ {
+  "window": 32,
+  "rto_us": 10000,
+  "seconds": 15.99,
+  "text": "Hi!",
+  "link": {
+   "retransmits": 0,
+   "duplicates": 2389,
+   "send_refused": 208001,
+   "frames_sent": 84228,
+   "peer_restarts": 0
+  }
+ },
+ {
+  "window": 24,
+  "rto_us": 20000,
+  "seconds": 15.97,
+  "text": "Hi!",
+  "link": {
+   "retransmits": 0,
+   "duplicates": 2379,
+   "send_refused": 32102,
+   "frames_sent": 84217,
+   "peer_restarts": 0
+  }
+ }
+]

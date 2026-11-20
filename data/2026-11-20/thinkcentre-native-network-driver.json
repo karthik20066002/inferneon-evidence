@@ -1,0 +1,48 @@
+{
+ "date": "2026-11-18",
+ "firmware": "ThinkCentre firmware with its own network driver; CM4 worker firmware",
+ "takeover": {
+  "confirmed": true,
+  "health_requests": "100/100",
+  "rx_stale_initial": 5,
+  "note": "I219 keeps a few RX descriptors cached from UEFI's ring (first frames land in UEFI's buffers, dropped) and then reports our buffer k in slot k+3; frames are read from the buffer the write-back names"
+ },
+ "per_frame_send_us": {
+  "uefi_snp": 36.7,
+  "native": 1.55
+ },
+ "bulk_8MiB": {
+  "uefi_snp": {
+   "tc_to_cm4_mbit": 245,
+   "cm4_to_tc_mbit": 741
+  },
+  "native": {
+   "tc_to_cm4_mbit": 245,
+   "cm4_to_tc_mbit": 886
+  }
+ },
+ "tc_window_sweep_native": {
+  "24": [
+   245,
+   894
+  ],
+  "48": [
+   262,
+   899
+  ],
+  "96": [
+   271,
+   908
+  ],
+  "192": [
+   277,
+   905
+  ],
+  "384": [
+   283,
+   907,
+   "174 retransmits"
+  ]
+ },
+ "conclusion": "ThinkCentre send cost is gone (3% of the upload); ThinkCentre -> CM4 is now capped near 280 Mbit/s by the CM4's receive path (~40 us per 1.5 KB frame), not by the window"
+}

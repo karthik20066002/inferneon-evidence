@@ -1,0 +1,43 @@
+{
+ "date": "2026-11-17",
+ "setup": "ThinkCentre + CM4 on a gigabit switch; firmware as board-tested on 2026-11-17",
+ "link_ping": {
+  "lost": 0,
+  "pings": 64,
+  "rtt_us_min": 174,
+  "rtt_us_median": 190,
+  "rtt_us_p90": 193
+ },
+ "request": "chat 'Hi', 13 prompt tokens, max_tokens 8, temperature 0, streamed",
+ "alone": {
+  "text": "Hi! How can I help you today",
+  "total_s": 7.4,
+  "first_token_s": 3.79,
+  "decode_s_per_token": 0.515
+ },
+ "row_parallel_90_10": {
+  "known_answer": "pass",
+  "text": "Hi! How can I help you today",
+  "total_s": 25.2,
+  "first_token_s": 15.96,
+  "decode_s_per_token": 1.319,
+  "row_requests_per_token": 172,
+  "wait_us_per_request": 4566,
+  "bytes_per_request": 57096,
+  "frames_per_request": 34.8,
+  "effective_link_mb_per_s": 12.5,
+  "link": {
+   "retransmits": 0,
+   "send_refused": 0,
+   "peer_restarts": 0
+  },
+  "cm4_row_us_per_run": 1352
+ },
+ "old_switch_2026_11_16": {
+  "wait_us_per_request": 10942,
+  "bytes_per_request": 119581,
+  "effective_link_mb_per_s": 10.9,
+  "send_refused_during_check": 16205
+ },
+ "note": "Same text as one board. The effective rate (12.5 MB/s = 100 Mb/s) matches 100 Mb/s wire speed: some hop between the boards is still negotiating 100 Mb/s, or the UEFI SNP path is per-frame bound; not yet told apart."
+}

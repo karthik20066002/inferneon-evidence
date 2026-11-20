@@ -1,0 +1,23 @@
+{
+ "date": "2026-11-18",
+ "firmware": "ThinkCentre firmware with the integrated-GPU bring-up path",
+ "gpu": "Intel HD 630 (8086:5912), GGTT 8 MiB at BAR0 0xf6000000 + 8 MiB",
+ "result": "pass: gate 1 (first light)",
+ "steps": [
+  "probe",
+  "bus master",
+  "forcewake",
+  "ggtt mapped",
+  "ring programmed",
+  "tail written",
+  "ring store landed",
+  "batch store landed",
+  "done"
+ ],
+ "value_written": "0x1f4ec0de",
+ "value_read_ring": "0x1f4ec0de",
+ "value_read_batch": "0xe0b13f21 (= !value)",
+ "ring_head_after": "0x20",
+ "ring_ctl_after": "0x1",
+ "notes": "the top GGTT entries held uninitialised stolen memory (address bits above 38 set); they were borrowed and their exact values restored. Earlier attempts stopped at GttBusy (present-bit check), harmlessly."
+}

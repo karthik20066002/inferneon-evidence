@@ -1,0 +1,3 @@
+check,prefix_hidden_states_rel_error,first_velocity_rel_error,actions_after_10_steps_rel_error
+tiny random policy from the published configs,4.7e-7,1.5e-6,2.9e-7
+"lerobot/smolvla_base, real weights",6.8e-7,3.9e-7,9.6e-7

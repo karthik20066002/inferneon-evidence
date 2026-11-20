@@ -1,0 +1,21 @@
+{
+ "date": "2026-11-17",
+ "change": "second memory module fitted to the ThinkCentre (dual-channel memory); same firmware as before",
+ "known_answer": "pass (single board)",
+ "short_prompt": {
+  "text": "Hi! How can I help you today",
+  "first_token_s": 3.7,
+  "decode_s_per_token": 0.344,
+  "before": {
+   "first_token_s": 3.77,
+   "decode_s_per_token": 0.515
+  }
+ },
+ "sustained_64_tokens": {
+  "first_token_s": 5.77,
+  "decode_first_quarter": 0.346,
+  "decode_last_quarter": 0.348,
+  "decode_max": 0.349,
+  "note": "no slowdown over 28 s; CPU temperature not readable by this firmware"
+ }
+}

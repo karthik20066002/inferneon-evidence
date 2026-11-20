@@ -1,0 +1,12 @@
+{
+ "label": "compiled engine, attention heads on 4 cores",
+ "prompt_sha256": "a534fd758d3b5f4257c035082ceeb239d281e392aff46890b6474b1be8b3c70c",
+ "prompt_chars": 10862,
+ "usage": {
+  "completion_tokens": 32,
+  "prompt_tokens": 3076,
+  "total_tokens": 3108
+ },
+ "seconds": 971.9,
+ "text": "The document describes the development of a new engine, `inferneon`, which is a safe port of the old engine's code. It details the process of"
+}

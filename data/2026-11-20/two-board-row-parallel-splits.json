@@ -1,0 +1,147 @@
+[
+ {
+  "split": "alone",
+  "seconds": 4.29,
+  "text": "Hi!"
+ },
+ {
+  "split": [
+   0.9,
+   0.1
+  ],
+  "seconds": 17.79,
+  "text": "Hi!",
+  "known_answer": {
+   "at_us": 1674752342,
+   "path": "row parallel",
+   "result": "pass"
+  },
+  "tp_before": {
+   "state": "on",
+   "client": {
+    "weights": [
+     0.9,
+     0.1
+    ],
+    "requests": 802,
+    "reused_inputs": 288,
+    "bytes": 71994604,
+    "peer_share": "497 linears, 424192 rows"
+   },
+   "waits": 802,
+   "wait_us_per_reply": 7803,
+   "link": {
+    "retransmits": 0,
+    "duplicates": 1283,
+    "send_refused": 16205,
+    "frames_sent": 43083,
+    "peer_restarts": 0
+   }
+  },
+  "tp_after": {
+   "state": "on",
+   "client": {
+    "weights": [
+     0.9,
+     0.1
+    ],
+    "requests": 2004,
+    "reused_inputs": 720,
+    "bytes": 215735352,
+    "peer_share": "497 linears, 424192 rows"
+   },
+   "waits": 2004,
+   "wait_us_per_reply": 9686,
+   "link": {
+    "retransmits": 0,
+    "duplicates": 5446,
+    "send_refused": 31992,
+    "frames_sent": 86551,
+    "peer_restarts": 0
+   }
+  },
+  "cm4_row_us_per_run": 1762,
+  "cm4_load": {
+   "rows": "497 linears, 424192 rows",
+   "weights": [
+    0.9,
+    0.1
+   ],
+   "index": 1,
+   "tensors": 401,
+   "bytes": 692768768,
+   "read_ms": 19159,
+   "verify_ms": 30679
+  }
+ },
+ {
+  "split": [
+   0.8,
+   0.2
+  ],
+  "seconds": 22.01,
+  "text": "Hi!",
+  "known_answer": {
+   "at_us": 1755486478,
+   "path": "row parallel",
+   "result": "pass"
+  },
+  "tp_before": {
+   "state": "on",
+   "client": {
+    "weights": [
+     0.8,
+     0.2
+    ],
+    "requests": 994,
+    "reused_inputs": 480,
+    "bytes": 82906476,
+    "peer_share": "497 linears, 831488 rows"
+   },
+   "waits": 994,
+   "wait_us_per_reply": 8346,
+   "link": {
+    "retransmits": 0,
+    "duplicates": 9958,
+    "send_refused": 48042,
+    "frames_sent": 131996,
+    "peer_restarts": 0
+   }
+  },
+  "tp_after": {
+   "state": "on",
+   "client": {
+    "weights": [
+     0.8,
+     0.2
+    ],
+    "requests": 2484,
+    "reused_inputs": 1200,
+    "bytes": 248270200,
+    "peer_share": "497 linears, 831488 rows"
+   },
+   "waits": 2484,
+   "wait_us_per_reply": 10451,
+   "link": {
+    "retransmits": 0,
+    "duplicates": 12423,
+    "send_refused": 32073,
+    "frames_sent": 91169,
+    "peer_restarts": 0
+   }
+  },
+  "cm4_row_us_per_run": 1909,
+  "cm4_load": {
+   "rows": "497 linears, 831488 rows",
+   "weights": [
+    0.8,
+    0.2
+   ],
+   "index": 1,
+   "tensors": 497,
+   "bytes": 1362558976,
+   "read_ms": 19180,
+   "verify_ms": 30962
+  }
+ }
+]

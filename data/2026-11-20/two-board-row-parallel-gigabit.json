@@ -1,0 +1,33 @@
+{
+ "date": "2026-11-17",
+ "setup": "gigabit on both board ports (CM4 link 1000 Mb/s), firmware with exact shard arithmetic",
+ "bulk": {
+  "cm4_to_tc_mbit": 741.3,
+  "tc_to_cm4_mbit": 245.5,
+  "retransmits": 0
+ },
+ "alone": {
+  "decode_s_per_token": 0.52,
+  "first_token_s": 3.77,
+  "text": "Hi! How can I help you today"
+ },
+ "row_parallel_90_10": {
+  "known_answer": "pass",
+  "decode_s_per_token": 0.838,
+  "first_token_s": 9.39,
+  "total_s": 15.25,
+  "text": "Hi! How can I help you today",
+  "wait_us_per_request": 1686,
+  "bytes_per_request": 57096,
+  "cm4_row_us_per_run": 1330,
+  "link": {
+   "retransmits": 0,
+   "duplicates": 0,
+   "send_refused": 0
+  }
+ },
+ "previous_100mbit": {
+  "decode_s_per_token": 1.319,
+  "wait_us_per_request": 4566
+ }
+}
