@@ -1,0 +1,19 @@
+S20 — Off-board verification of the Lambda Engine
+
+Evidence type: project-origin host test results (laptop).
+Transformation: checkpoint, family and error columns only; implementation withheld.
+Published records:
+  data/2026-11-22/lambda-engine-tier1-real-weights.csv  sha256 cc93274a9a5bc694b0354a1af795eaef767187ad5221940087c5d9a3b28c2bad
+  data/2026-11-22/lambda-engine-tier2-tiny-models.csv  sha256 cee1a2a1113baa2cdd12c31253fc016532e1deb4624b8030d2a57b3cf2b1e4f4
+  data/2026-11-22/lambda-engine-smolvla.csv  sha256 892d0b99ff464452120d8927b53b115974312c600547a75be958ec7b82ee47e7
+  data/2026-11-22/lambda-engine-generated-engines.csv  sha256 b667dcea7e73cd0159c2adc7e6e41af2a912f42d05d1db8facc256864aa61a85
+  data/2026-11-22/lambda-engine-tokenizers.csv  sha256 782e92cc6fc204876f98039f3df81f956e49ba6561a8100c3b22a5206d397ef7
+  data/2026-11-22/lambda-engine-chat-templates.csv  sha256 28268f16d872d65cf9f7db458479883c4d7dd8b711b5a2b37a171f13cbf71cea
+
+The Lambda Engine reads a model's published configuration, weights, tokenizer and chat template.
+- 20 published checkpoints on their real weights matched to Hugging Face transformers (f32): every layer within 1e-4 relative, the same next token at every position
+- 48 architecture families on small random models built from the published configurations: within 5e-5 relative
+- SmolVLA (vision-language-action) against LeRobot's own code
+- engines generated from config.json against the hand-written board engines (Gemma 3 1B, LFM3-1.7B): 49,829,376 values compared, 0 different
+- tokenizers from each model's tokenizer.json against the Hugging Face tokenizers library: 3 families, 0 differences
+- 21 published chat templates against transformers' own renderer: 584 renders, every character identical, errors included; plus a 49-template feature corpus

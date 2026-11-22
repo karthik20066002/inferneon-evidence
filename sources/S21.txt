@@ -1,0 +1,15 @@
+S21 — Board records: LFM3-1.7B on the CM4 and the ThinkCentre
+
+Evidence type: project-origin board records.
+Transformation: build identifiers replaced by descriptions. Outcome-level only.
+Published records:
+  data/2026-11-22/cm4-lfm3-first-run.json  sha256 20cc0c5b72872623d1d1303cdda598e1c142ead314c8fe65ce61a89889b5a22a
+  data/2026-11-22/cm4-lambda-engine-lfm3.json  sha256 872bd85ae10f7d3f05da4e59ae50a0d50abde21be97918c72739e863636891b5
+  data/2026-11-22/thinkcentre-lambda-engine-lfm3.json  sha256 ca175d0b77da6ac5f68c342622353ab33fcd65127790037c1f701a37cf38bb0e
+  data/2026-11-22/thinkcentre-lambda-engine-lfm3-scalar.json  sha256 bdabe21009aae697f11cdb188c9bf4c4507c594cdaab1cb0719ecce55bacd5c3
+
+Three fixed prompts x 32 greedy tokens, temperature 0:
+- CM4, hand-written board engine (first board run, 22 Nov): 0.584 s/token, first token 8.5–10.5 s
+- CM4, the Lambda Engine's generated engine (tokenizer and chat template from the model's own files): 0.578 s/token, the same texts and prompt token counts
+- ThinkCentre, the same container: 0.111 s/token, first token 1.8–2.2 s, the same texts (a first run with a scalar kernel: 1.47 s/token)
+The answers on the ARM and x86 machines are identical to each other and to the hand-written engine's.

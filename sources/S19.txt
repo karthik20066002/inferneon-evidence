@@ -1,0 +1,14 @@
+S19 — Board records: one model on the ThinkCentre and the CM4 together
+
+Evidence type: project-origin board records.
+Transformation: link addresses removed. Outcome-level only.
+Published records:
+  data/2026-11-16/two-board-layer-split.json  sha256 8f81a07fb8d7ca57c4ac863d80be2766aa3e17f2a6d02d596531fa58e7fc0cf0
+  data/2026-11-16/two-board-row-parallel.json  sha256 91e4fa89b59f543190e27e81bd053fb44fbf54bf9725a511d50e3db2fd88cf64
+  data/2026-11-20/two-board-row-parallel-gigabit-switch.json  sha256 3b1679bde144b9d3617fb6309255af881108814e20c549a03b6c8e7ecb17d020
+  data/2026-11-20/two-board-row-parallel-splits.json  sha256 efeab97d6735ca8e71315d749924fa114c7a242c736f77af83a022e290480aa4
+  data/2026-11-20/two-board-link-settings-sweep.json  sha256 ce61cc0180201f2b7d5e983feb4f79278623646b0a0c8db95230634327e66e89
+
+Layer split: the ThinkCentre and the CM4 each run part of Attis's layers and pass the hidden state over Ethernet: the same text as one board on the three fixed prompts, 0.906 s/token.
+Row parallel: both boards compute every matrix, rows split by measured speed, over raw Ethernet frames: logits identical to the single-machine reference bit for bit; link round trip 137 µs median over 64 pings, none lost.
+Two boards were slower than the ThinkCentre alone on these links; the result shown is correctness.

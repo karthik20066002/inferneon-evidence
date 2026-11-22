@@ -1,0 +1,25 @@
+S18 — Board records: Attis and drivers on the ThinkCentre M710q
+
+Evidence type: project-origin board records (JSON written by the measuring client).
+Transformation: build identifiers replaced by descriptions; link addresses removed. Outcome-level only.
+Published records:
+  data/2026-11-16/thinkcentre-attis-reference.json  sha256 13939a528e74b7dd2c0180378c19ef9a5a95c9714f2158eaad97b95728dcb334
+  data/2026-11-16/thinkcentre-attis-kernel-update.json  sha256 f9552070c57ff8a4328b6c36ae18aae39a78e6eb8637c426f36fc9070c9d7a15
+  data/2026-11-16/thinkcentre-attis-compiled-engine.json  sha256 8a94cef29fceadb85d56ed9de2f722303ed268472cc6aa3314928dc350ac0596
+  data/2026-11-20/thinkcentre-attis-dual-channel-memory.json  sha256 ac0f210fab694c6ba1b3a0b67a25c7d65d107ee2143edc1f7b9ac3094c7b6d20
+  data/2026-11-20/thinkcentre-long-prompt-1-reference-engine.json  sha256 219d1ea4d15e9a7e7375f77df7df5f43989d5101d24e6b408d675923fa2143f8
+  data/2026-11-20/thinkcentre-long-prompt-2-compiled-engine.json  sha256 53286727d60f376f3438a975a603da3721541b45ac6bedaf9a0c4a35d624f6a1
+  data/2026-11-20/thinkcentre-long-prompt-3-parallel-attention.json  sha256 1bb6d17a5b0bfdf1e76235d409519906d0012e29539117916e3b3e8301f203c5
+  data/2026-11-20/thinkcentre-native-network-driver.json  sha256 63a6b215792b04bb7104abf19be132780f411a996b77efa997842a1a70598adb
+  data/2026-11-20/thinkcentre-integrated-gpu-first-light.json  sha256 8fc450199cdc495fa38ad411463c37243eb4dff547460289a5402c810a7d6165
+
+The ThinkCentre M710q (2017, Core i3-7100T, two cores / four threads) boots the firmware from a USB stick; there is no operating system.
+Attis 27B, three fixed prompts x 32 greedy tokens, median decode seconds per token:
+- first port (15 Nov): 0.848 s/token
+- kernel update: 0.787 s/token
+- compiled engine, parameters from the board's own sweep: 0.521 s/token
+- the same firmware with a second memory module (dual-channel): 0.344 s/token (before 0.515); first token 5.77 s on a sustained 64-token run
+Every step gave the same text on the three prompts.
+Long prompt (3076 tokens): same text from the reference and compiled engines; 972 s against 1189 s with attention heads on all four cores.
+Own network driver: 1.55 µs per frame sent against 36.7 µs through UEFI's driver.
+Integrated GPU (Intel HD 630): first command executed under the firmware, a value written and read back.
