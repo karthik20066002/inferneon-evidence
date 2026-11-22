@@ -1,0 +1,49 @@
+{
+ "recorded": "2026-11-22T20:55:42+05:30",
+ "platform": "cm4",
+ "runtime_build": "LFM3-1.7B on the Lambda Engine (engine generated from config.json; tokenizer and chat template from the model's own files)",
+ "firmware_label": "Lambda Engine firmware",
+ "tokens": 32,
+ "runs": [
+  {
+   "prompt": "What color is the sky on a clear day?",
+   "text": "The sky on a clear day is typically **blue**. This occurs because Earth's atmosphere scatters shorter wavelengths of sunlight (like blue light) more effectively than longer",
+   "chunks": 32,
+   "ttft_s": 11.486,
+   "decode_s_per_chunk_median": 0.5777,
+   "total_s": 28.25,
+   "usage": {
+    "completion_tokens": 32,
+    "prompt_tokens": 21,
+    "total_tokens": 53
+   }
+  },
+  {
+   "prompt": "Explain in two sentences why the ocean is salty.",
+   "text": "The ocean is salty because rivers carry dissolved minerals and salts from land into the ocean, and over time, these salts accumulate as water evaporates and leaves the",
+   "chunks": 32,
+   "ttft_s": 10.039,
+   "decode_s_per_chunk_median": 0.5786,
+   "total_s": 26.82,
+   "usage": {
+    "completion_tokens": 32,
+    "prompt_tokens": 22,
+    "total_tokens": 54
+   }
+  },
+  {
+   "prompt": "Write a short Python function that reverses a string.",
+   "text": "```python\ndef reverse_string(s):\n    \"\"\"\n    Return the reversed version of the input string `s`.\n\n    Parameters:\n    - s: a string",
+   "chunks": 32,
+   "ttft_s": 9.544,
+   "decode_s_per_chunk_median": 0.5776,
+   "total_s": 26.31,
+   "usage": {
+    "completion_tokens": 32,
+    "prompt_tokens": 21,
+    "total_tokens": 53
+   }
+  }
+ ],
+ "temperature_millic_after": 38421
+}
