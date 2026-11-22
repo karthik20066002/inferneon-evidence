@@ -1,0 +1,3 @@
+model,positions,past_sliding_window,rollback_and_continuation,values_compared,differences
+Gemma 3 1B,600,yes (window 512),yes,28734976,0
+LFM3-1.7B,320,yes (window 256),yes,21094400,0

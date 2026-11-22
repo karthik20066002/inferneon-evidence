@@ -34,6 +34,13 @@ ce61cc0180201f2b7d5e983feb4f79278623646b0a0c8db95230634327e66e89  data/2026-11-2
 3b1679bde144b9d3617fb6309255af881108814e20c549a03b6c8e7ecb17d020  data/2026-11-20/two-board-row-parallel-gigabit-switch.json
 ad68030de455fd3910564df16cc46c01645c238bd56907136adaf217e3c2171a  data/2026-11-20/two-board-row-parallel-gigabit.json
 efeab97d6735ca8e71315d749924fa114c7a242c736f77af83a022e290480aa4  data/2026-11-20/two-board-row-parallel-splits.json
+b2c674af4dbf4933b9246bb8cde1109966aef93ccaa6c09672342915016142a4  data/2026-11-22/README.txt
+20cc0c5b72872623d1d1303cdda598e1c142ead314c8fe65ce61a89889b5a22a  data/2026-11-22/cm4-lfm3-first-run.json
+b667dcea7e73cd0159c2adc7e6e41af2a912f42d05d1db8facc256864aa61a85  data/2026-11-22/lambda-engine-generated-engines.csv
+892d0b99ff464452120d8927b53b115974312c600547a75be958ec7b82ee47e7  data/2026-11-22/lambda-engine-smolvla.csv
+cc93274a9a5bc694b0354a1af795eaef767187ad5221940087c5d9a3b28c2bad  data/2026-11-22/lambda-engine-tier1-real-weights.csv
+cee1a2a1113baa2cdd12c31253fc016532e1deb4624b8030d2a57b3cf2b1e4f4  data/2026-11-22/lambda-engine-tier2-tiny-models.csv
+782e92cc6fc204876f98039f3df81f956e49ba6561a8100c3b22a5206d397ef7  data/2026-11-22/lambda-engine-tokenizers.csv
 fa91eff66017c44c625b84703980d9ec22b7cb885d4facf02db926ffe7041f70  data/cm4_api_latency.csv
 a77646d10498e4751e0f4bf91fe1b03e0f30a37c3d20abdf0d82176e822d5e17  data/cm4_generation_runs.csv
 63f4e767d0108fe6356fdab5713d0ec0e20058136c0f5c70a109e520730d17cd  data/cm4_seconds_per_token.json
