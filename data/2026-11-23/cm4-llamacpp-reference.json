@@ -1,0 +1,22 @@
+{
+ "measured": "2026-11-05 to 2026-11-06 (published 2026-11-23)",
+ "platform": "Raspberry Pi CM4, 8 GB, 4 x Cortex-A72 at 1.5 GHz, running Linux",
+ "runtime": "llama.cpp (a public fork with packed ternary support), release build, 4 threads, context 512, HTTP server timings",
+ "model": "the third-party 27B ternary base model that Attis is adapted from, as a packed 2-bit GGUF file (7.17 GB)",
+ "runs": [
+  {
+   "prompt_tokens": 15,
+   "prompt_s_per_token": 3.812,
+   "generated_tokens": 4,
+   "decode_s_per_token": 4.705
+  },
+  {
+   "prompt_tokens": 30,
+   "prompt_s_per_token": 3.521,
+   "generated_tokens": 32,
+   "decode_s_per_token": 4.386
+  }
+ ],
+ "environment": "no swap thrashing; model resident in RAM after loading; 45.2 C, not throttled, all cores at 1.5 GHz",
+ "note": "a reference point for the bare-metal firmware on the same board; not a matched experiment (different dates, builds and run lengths; Attis adds post-trained components to the base model)"
+}

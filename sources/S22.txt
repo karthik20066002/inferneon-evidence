@@ -1,0 +1,13 @@
+S22 — Reference measurement: the 27B base model on llama.cpp on the CM4
+
+Evidence type: project-origin measurement notes (server timings), 5-6 November 2026.
+Transformation: base model and fork names anonymised; raw log paths left out.
+Published record:
+  data/2026-11-23/cm4-llamacpp-reference.json  sha256 c8c21143adbb1353e9a1bf378f20f7c8927e5e6924da89333864e7b88fe10cf5
+
+Raspberry Pi CM4 (8 GB, 4 x Cortex-A72 at 1.5 GHz) running Linux; llama.cpp (a public fork with packed ternary support), 4 threads, context 512.
+Model: the third-party 27B ternary base model that Attis is adapted from, as a packed 2-bit GGUF file (7.17 GB).
+- 15 prompt tokens + 4 generated: 3.812 s/token prompt, 4.705 s/token decode
+- 30 prompt tokens + 32 generated: 3.521 s/token prompt, 4.386 s/token decode
+No swap thrashing; the model was resident in RAM after loading; 45.2 C, not throttled.
+For comparison, the bare-metal firmware on the same board: Attis at 3.5432 s/token decode (data/2026-11-16/cm4-attis-reference.json) and 82.4 s for a 42-token prompt (S13).
